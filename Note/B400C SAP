@@ -1,0 +1,272 @@
+B400C
+1. You create a domain in the ABAP dictionary
+How can you use this domain?
+As the data type of a data element in the ABAP Dictionary
+2.
+3.If a table does not have MANDT as part of the primary key, it is
+3.  Client-independent
+
+4. 
+
+5. When creating a transparent table in the ABAP Dictionary, which step automatically creates the table in the underlying database?
+Activating the table
+
+6. Which of the following functions does the ABAP Dispatcher perform?
+There are 2 correct answers to this question.
+3.  It distributes user requests among available work processes.
+
+4.  It communicates with other instances in the system.
+
+7. The following code indicates:
+
+SELECT fld6 fld3 fld2 fld1 FROM tab1 INTO CORRESPONDING FIELDS OF
+TABLE itab
+WHERE fld3 = pfld3.
+Table itab can only contain fields also in table tab1.
+
+8. To select all database entries for a certain WHERE clause into an internal table in one step, use
+1.  SELECT_INTO TABLE itab_
+
+9. What is the system field for the current date?
+1.  SY-DATUM
+
+10. Which statement will sort the data of an internal table with fields FRUIT, QTY, and PRICE so that it appears as follows?
+FRUIT QTY PRICE
+
+Apples 12 22.50
+Apples 9 18.25
+Oranges 15 17.35
+Bananas 20 10.20
+Bananas 15 6.89
+Bananas 5 2.75
+SORT itab BY PRICE DESCENDING.
+
+11. Which of the following ABAP statements throws an error at the syntax check?
+DATA variable(5) TYPE t.
+
+12. The following program outputs what? 
+report zjgtest1
+write: /1 'Ready_'.
+PARAMETER: test. INITIALIZATION.
+write: /1 'Set_'.
+
+START-OF-SELECTION.
+write: /1 'GO!!'.
+-Ready_ GO!! (each on its own line)
+
+13. In regard to field selection, what option of the SELECT statement is required?
+-3.  INTO
+
+14. How is an ABAP program with several dialog steps executed?
+Please choose the correct answer.
+ Usually, dialog steps are assigned to different dialog work processes.
+
+15. Which keyword adds rows to an internal table while accumulating numeric values?
+COLLECT
+
+16. A field declared as type T has the following internal representation: 
+HHMMSS
+
+17. You want to create a transparent table.
+Which of the following must you define to activate the table?
+There are 2 correct answers to this question.
+1.  The primary key
+3.  A short description
+
+18. A dictionary table is made available for use within an ABAP program via the TABLES statement.
+TRUE
+
+19. 
+
+20. What is output by the following code?
+DATA: BEGIN OF itab OCCURS 0, letter type c, END OF itab.
+
+itab-letter = 'A'. APPEND itab. itab-letter = 'B'. APPEND itab. 
+itab-letter = 'C'. APPEND itab. itab-letter = 'D'. APPEND itab.
+ 
+
+LOOP AT itab. 
+SY-TABIX = 2.
+WRITE itab-letter. 
+EXIT.
+ENDLOOP.
+-A
+
+21. Which system field contains the contents of a selected line?
+SY-LISEL
+
+22. Which of the following describes the internal representation of a type D data object?
+--Coba C
+23. To read a single line of an internal table, use the following:
+READ TABLE itab.
+
+24. In regard to a function group, which of the following is NOT a true statement?
+//hati hati Shares subroutines with all its function modules.
+
+25. When modifying an internal table within LOOP AT itab. _ ENDLOOP. you must include an index number.
+Di soal B itu TRUE di soal A itu False
+
+26. Which statements are allowed for processing internal tables? (Choose three)
+2.  INSERT
+
+3.  DELETE
+
+4.  MODIFY
+
+27. You may declare your own internal table type using the TYPES keyword.
+TRUE
+
+28. What is the transaction code for the ABAP Editor?
+SE38
+
+29. You want to move a transport request from the development system to the subsequent system. Which of the following are prerequisites for this? There are 2 correct answers to this question.
+2.  All objects included in the transport request must be activated.
+
+3.  The transport request must be released
+
+30. Name the type of ABAP Dictionary table that has these characteristics: 
+Same number of fields as the database table
+Same name as database table 
+Maps 1:1 to database table
+-Transparent
+
+31. For the code below, second_field is of what data type?
+DATA: first_field type P, second_field like first_field.
+-P
+
+32. The following statement writes what type of data object?
+WRITE: /1 'Total Amount:'. 
+- Text literal
+
+33. An internal table that is nested within another internal table should not contain a header line
+FALSE
+
+34. The complete technical definition of a table field is determined by the field's:
+DOMAIN
+
+35. Assuming tab1-fld7 is not a key field, how can you prevent reading all the table rows?
+
+SELECT fld1 fld2 fld3 FROM tab1 INTO (fld4, fld5, fld6) WHERE fld7 = pfld7.
+WRITE: /1 fld4, fld5, fld6. ENDSELECT.
+A: Take fld7 out of the WHERE clause.
+36. Which of the following standard types is numeric?
+There are 3 correct answers to this question.
+P
+I
+F
+
+37. If this code results in an error, the remedy is:
+
+SELECT fld1 fld2 FROM tab1 WHERE fld3 = pfld3. WRITE: /1 tab1-fld1, tab1-fld2.
+ENDSELECT.
+-Add INTO (tab1-fld1, tab1-fld2).
+
+38. You may change the following data object as shown below so that it equals 3.14.
+
+CONSTANTS: PI type P decimals 2 value '3.1'. PI = '3.14'
+FALSE
+
+39. The following code indicates:
+
+SELECT fld1 fld2 FROM tab1 APPENDING TABLE itab WHERE fld1 IN sfld1
+-Add rows to the existing rows of itab.
+
+40. After a DESCRIBE TABLE statement SY-TFILL will contain 
+The number of rows in the internal table.
+
+41. An event starts with an event keyword and ends with: 
+Another event keyword.
+
+42. Which keyword adds a line anywhere within an internal table?
+INSERT
+
+43. fter a successful SELECT statement, what does SY-SUBRC equal?
+0
+
+44. 	
+You want to select data from two tables and store the result in as structure.
+Table PARTNER contains the fields PART_ID and KIND.
+Table CONTRACT contains the fields CONT_ID, CONT_TYPE and DIVISION.
+The structure is defined as follows
+DATA: BEGIN OF wa_result,
+Part_id type partnerpart_
+id, cont_id type contractcont_
+id,
+Cont_type TYPE contractcont_
+type,
+END of wa_result,
+Lt_result type table of wa_result.
+How can you replace the following SELECT statement with an outer join?
+SELECT part_id from partner INTO wa_result WHERE kind = 'Residential'.
+SELECT cont_id from CONTRACT into wa_resultcont_
+id WHERE part EQ
+wa_partnerpart_
+id And DIVISION eq 'Water'.
+Append wa_result to lt_result.
+ENDSELECT.
+If sysubrc<>
+0. CLEAR wa_resultcont_
+id
+APPEND wa_result TO lt_result. ENDIF.
+ENDSELECT.
+ 
+Please choos
+SELECT part_idcont_id from partner AS A LEFT JOIN contract AS b ON a~part_id = b~part_id INTO CORRESPONDING FIELDS OF TABLE lt_result WHERE kind = 'Residential' and AND division EQ 'Water'.
+
+
+45. If a table contains many duplicate values for a field, minimize the number of records returned by using this SELECT statement addition.
+DISTINCT
+
+46. If the following code results in a syntax error, the remedy is:
+
+DATA: itab TYPE SORTED TABLE OF rec_type WITH UNIQUE KEY field1 WITH HEADER LINE.
+
+itab-field1 = 'Company'. itab-field2 = '1234'. INSERT TABLE itab. itab-field1 = 'Bank'. itab-field2 = 'ABC'. INSERT TABLE itab.
+SORT itab.
+ LOOP AT itab.
+write: /1 itab-field1, itab-field2.
+ ENDLOOP.
+--Remove the SORT statement
+
+47. The TABLES statement declares a data object
+FALSE
+
+48. What will be output by the following code?
+DATA: BEGIN OF itab OCCURS 0, fval type i, END OF itab. itab-fval = 1. APPEND itab.
+itab-fval = 2. APPEND itab.
+
+FREE itab.
+WRITE: /1 itab-fval
+--2
+
+49. To remove lines from a database table, use
+DELETE
+
+50. Which data types are incomplete ABAP standard data types?
+There are 3 correct answers to this question.
+C
+N
+P
+
+ 
+B400B
+10. DATA: BEGIN OF itab OCCURS 10,
+qty type I, END OF itab.
+DO 25 TIMES. itab-qty = sy-index. APPEND itab. ENDDO. LOOP AT itab WHERE qty > 10.
+WRITE: /1 itab-qty. ENDLOOP.
+
+This will result in:
+11. The output for the following code will be:
+
+report zabaprg.
+DATA: char_field type C. char_field = 'ABAP data'. WRITE char_field.
+-A
+12. If an internal table is declared without a header line, what else must you declare to work with the table's rows?
+-A work area with the same structure as the internal table.
+13. The following code indicates:
+
+SELECT fld6 fld3 fld2 fld1 FROM tab1 INTO CORRESPONDING FIELDS OF
+TABLE itab
+WHERE fld3 = pfld3.
+-The order of the fields in itab does not matter.
+14.
